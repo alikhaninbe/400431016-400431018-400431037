@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+:root {
+    --animate-delay: 0.2s;
+}
+
 #shop {
     background: linear-gradient(rgba(0, 0, 0.2, 0.2), #151515), url(back.jpg);
     background-size: cover;
@@ -105,6 +109,12 @@ nav ul li {
     padding: 10px 20px;
 }
 
+nav ul li:hover {
+    background-color: rgb(55, 134, 171);
+    border-radius: 10%;
+    transition: 300ms;
+}
+
 nav ul li a {
     color: whitesmoke;
     font-family: 'Lato';
@@ -112,10 +122,6 @@ nav ul li a {
     font-weight: bolder;
 }
 
-nav ul li a:hover {
-    color: springgreen;
-    transition: 300ms;
-}
 
 #menu {
     visibility: hidden;
@@ -176,6 +182,8 @@ nav ul li a:hover {
     font-family: "Kaushan Script";
     position: relative;
     display: inline-block;
+    padding: 15px;
+    background-size: 100px;
     background: #12c2e9;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
@@ -184,13 +192,18 @@ nav ul li a:hover {
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    transition: 0.5s;
+}
 
+.title p:hover {
+    background-position-x: -250px;
 
 }
 
 
 .title h1 {
     font-size: 50px;
+    font-family: 'Poppins';
 }
 
 .title img {
@@ -206,7 +219,7 @@ nav ul li a:hover {
 }
 
 .service-box {
-    width: 75%;
+    width: 60%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -214,7 +227,7 @@ nav ul li a:hover {
 }
 
 .single-service {
-    flex-basis: 44%;
+    flex-basis: 46%;
     text-align: center;
     border-radius: 7px;
     margin-bottom: 20px;
@@ -331,5 +344,3 @@ hr {
 .footer-row p {
     line-height: 35px;
 }
-
-#laptop {}
